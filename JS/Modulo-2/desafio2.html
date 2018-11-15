@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>DOM Italo</title>
+</head>
+<body>
+    <!--
+        1º exercício
+        Crie um botão que ao ser clicado cria um novo elemento em tela com a forma de um quadrado
+        vermelho com 100px de altura e largura. Sempre que o botão for clicado um novo quadrado deve
+        aparecer na tela.
+    -->
+    <div id="app">
+        <button class="botao">Adicionar Quadrado</button>
+        <div class="quadrados"></div>
+    </div>
+<script>
+    const btnElement = document.querySelector('button.botao');
+    const quadrados = document.querySelector('div.quadrados');
+    function getRandomColor() {
+        var letters = "0123456789ABCDEF";
+        var color = "#";
+        for (var i = 0; i < 6; i++) {
+            color += letters[Math.floor(Math.random() * 16)];
+        }
+        return color;
+    }
+    btnElement.onclick = function(){
+        const quadrado = document.createElement('div');
+        quadrado.setAttribute('class', 'quadrado');
+        quadrados.appendChild(quadrado);
+        quadrado.style.width = "100px";
+        quadrado.style.height = "100px";
+        quadrado.style.cssFloat = "left";
+        quadrado.style.backgroundColor = "red";  
+        
+        quadrado.onmouseover = function(){
+            quadrado.style.backgroundColor = getRandomColor();
+        }
+    }       
+    
+</script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>DOM Italo</title>
+</head>
+<body>
+    <input type="text" placeholder="Add nome da lista" name="nome">
+    <button id="botao_add_nome">Adicionar Nome</button>
+    <ul id="minhaul"></ul>
+    <script>
+        const nomes = ["Italo", "Diego", "Zé Pequeno"];
+        const seleUl = document.querySelector('ul#minhaul');        
+        const botaoAddNome = document.querySelector('#botao_add_nome');
+        const inputNome = document.querySelector('input[name=nome]');
+        for(i = 0; i < nomes.length; i++){
+            let li = document.createElement("li");
+            li.appendChild(document.createTextNode(nomes[i]));
+            seleUl.appendChild(li);
+        }
+        botaoAddNome.onclick = function() {
+            const nomePreenchido = inputNome.value;
+            let li = document.createElement("li");
+            li.appendChild(document.createTextNode(nomePreenchido));
+            seleUl.appendChild(li);
+            inputNome.value = "";
+        }
+    </script>
+</body>
+</html>

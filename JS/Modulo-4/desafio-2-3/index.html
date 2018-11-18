@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>GitUser</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-sm-6 align-self-center mt-5">
+                <h1>Busca Repositório</h1>
+                <p>
+                    Esta é uma ferramenta para listar repositorios de um usuário no Github
+                </p>
+                <div class="form-group">
+                    <label for="user">Usuário GitHub</label>
+                    <input type="text" class="form-control" id="user" aria-describedby="userHelp" placeholder="Qual usuário deseja buscar?" />
+                    <small id="userHelp" class="form-text text-muted">Informe apenas o nome de usuário, sem @.</small>
+                </div>
+                <button class="btn btn-primary" id="botaoBusca">Buscar repositorios</button>
+
+                <h4 class="mt-5">Repositórios encontrados:</h4>
+                <ul class="list-group">
+                </ul>
+            </div>            
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>

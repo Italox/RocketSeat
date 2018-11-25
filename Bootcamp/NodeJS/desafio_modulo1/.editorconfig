@@ -1,0 +1,8 @@
+root = true
+
+[*] # Seleciona todos os arquivos
+indent_style = space # Define o padrão de identação
+indent_space_size = 2 # Define o tamanho do espaço da identação
+charset = utf-8 # Define charset utilizado dentro de todos os arquivos
+trim_trailing_whitespace = true
+insert_final_newline = true # Após todo salvamento insera uma nova linha no final do arquivo para melhor edição futura

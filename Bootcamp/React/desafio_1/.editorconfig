@@ -1,0 +1,9 @@
+root = true #Indica que estas configurações devem ser utilizadas para todo o root
+
+[*] # Informa que as configurações abaixo devem ser utilizadas em todo tipo de arquivo
+indent_style = space
+indent_size = 2
+end_of_line = lf # Tipo de quebra de linha padrão, o windows/linux/mac possuem diferentes.
+charset = utf-8
+trim_trailing_whitespace = true # Quando deixar espaços no final do código ele remove
+insert_final_newline = true # Poe uma linha em branco sempre em cada arquivo

@@ -1,0 +1,82 @@
+body {
+  background: #e9ebee;
+  margin: 0 auto;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+
+.topo {
+  background: #4267b2;
+  text-align: center;
+  padding: 5px 0;
+
+  h1 {
+    color: #fff;
+    font-size: 15px;
+  }
+}
+
+.container {
+  display: flex;
+  flex-flow: column;
+
+  >* {
+    flex: 1 100%;
+  }
+
+}
+
+.post {
+  background: #fff;
+  width: 50%;
+  margin: 2% auto;
+  padding: 0 1.4%;
+  -webkit-box-shadow: 0px 0px 26px -20px rgba(0, 0, 0, 0.67);
+  -moz-box-shadow: 0px 0px 26px -20px rgba(0, 0, 0, 0.67);
+  box-shadow: 0px 0px 26px -20px rgba(0, 0, 0, 0.67);
+  border-radius: 4px;
+
+  @media screen and (max-width: 800px) {
+    width: 90%;
+  }
+
+  .linha {
+    width: 100%;
+    height: 1px;
+    background: #e6e6e6;
+  }
+
+  .post_header {
+    display: flex;
+    flex-flow: row;
+    align-content: stretch;
+    padding: 10px 0;
+
+    >* {
+      flex: 1 100%;
+    }
+
+    .header_1 {
+      max-width: 80px;
+      padding: 0 15px 0 0;
+
+      img {
+        border-radius: 50px;
+        width: 80px;
+        float: left;
+      }
+    }
+
+    .header_2 {
+      h2 {
+        font-size: 18px;
+        color: #838383;
+        margin: 10px 0;
+      }
+
+      .hora {
+        font-size: 14px;
+      }
+    }
+  }
+}
